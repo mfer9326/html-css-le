@@ -83,7 +83,7 @@ pre {
 
 .hero {
   background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent),
-    url('/images/hero-image.png');
+    url('../images/hero-image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
