@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@font-face {
+  font-family: 'Charter';
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('../fonts/charter-italic-bold.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root {
+  font-size: 16px;
+  --gray30: #212121;
+  --gray20: #212429;
+  --gray10: #616161;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: floralwhite;
+  color: var(--gray30);
+  margin: 0;
+}
+
+a {
+  color: var(--gray30);
+  text-decoration: none;
+}
+
+header {
+  font-size: 0.875rem;
+  color: var(--gray10);
+}
+
+header a:hover {
+  color: #eee;
+  background-color: var(--gray30);
+  padding: .5rem;
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.75rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+h1~p {
+  margin-bottom: 4rem;
+}
+
+hr {
+  border: 1px solid --var(--gray10);
+  margin: 4rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  background-color: #FEC62E;
+}
+
+blockquote {
+  margin: 2rem 0;
+}
+
+.hero {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent),
+    url('../images/hero-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  margin: 0;
+}
+
+.section-content {
+  margin-top: 10.25rem;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+.section-content ol li {
+  line-height: 1.5rem;
+}
+.section-content ul li {
+  margin-bottom: 1rem;
+}
+.section-content+hr {
+  display: none;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content img {
+  margin-top: 2.5rem;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal);
+}
+
+.section-content h3::after {
+  content: '';
+  width: 192px;
+  height: 4px;
+  background-color: var(--gray30);
+  display: inline-block;
+}
