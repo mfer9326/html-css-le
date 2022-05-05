@@ -48,6 +48,8 @@ body {
 
 .wrapper {
   /*delimitar fronteras y centrar*/
+
+  
   width: 900px;
   margin: auto;
 }
