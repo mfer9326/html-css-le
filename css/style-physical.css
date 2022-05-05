@@ -46,6 +46,22 @@ body {
   margin: 0;
 }
 
+.wrapper {
+  /*delimitar fronteras y centrar*/
+  width: 902px;
+  margin: auto;
+}
+
+.main-content {
+
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 a {
   color: var(--gray30);
   text-decoration: none;
@@ -54,6 +70,7 @@ a {
 header {
   font-size: 0.875rem;
   color: var(--gray10);
+  position: relative;
 }
 
 header a:hover {
@@ -97,10 +114,24 @@ h3 {
 
 pre {
   background-color: #FEC62E;
+  padding: 40px;
+  line-height: 24px;
 }
+
 
 blockquote {
   margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 10px solid var(--gray30);
+  font-size: 1.5rem;
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+
+blockquote span::before {
+  content: '-';
 }
 
 .hero {
@@ -120,12 +151,15 @@ blockquote {
 .section-content:first-of-type {
   margin: 0;
 }
+
 .section-content ol li {
   line-height: 1.5rem;
 }
+
 .section-content ul li {
   margin-bottom: 1rem;
 }
+
 .section-content+hr {
   display: none;
 }
@@ -140,10 +174,11 @@ blockquote {
 
 .section-content h3 {
   counter-increment: titleList;
+  padding-bottom: 4px;
 }
 
 .section-content h3::before {
-  content: counter(titleList, decimal);
+  content: counter(titleList, decimal)'. ';
 }
 
 .section-content h3::after {
