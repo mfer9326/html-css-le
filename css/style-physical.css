@@ -37,6 +37,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,18 +47,14 @@ body {
   margin: 0;
 }
 
+
+
 .wrapper {
   /*delimitar fronteras y centrar*/
-
-  
-  width: 900px;
+  width: 902px;
   margin: auto;
 }
 
-.main-content {
-
-  padding: 20px;
-}
 
 img {
   max-width: 100%;
@@ -71,14 +68,22 @@ a {
 
 header {
   font-size: 0.875rem;
+  width: 188px;
   color: var(--gray10);
-  position: relative;
+  position: absolute;
+  top: 64px;
+  left: -232px;
+  z-index: -1;
 }
 
 header a:hover {
   color: #eee;
   background-color: var(--gray30);
   padding: .5rem;
+}
+
+header li {
+  margin-bottom: 24px
 }
 
 nav details summary {
@@ -90,6 +95,7 @@ h1 {
   font-size: 3.75rem;
   margin-top: 4rem;
   margin-bottom: 1rem;
+  font-weight: normal;
 }
 
 h1~p {
@@ -113,6 +119,10 @@ h3 {
   font-weight: normal;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  background-color: floralwhite;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
 }
 
 pre {
@@ -137,6 +147,15 @@ blockquote span::before {
   content: '-';
 }
 
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+}
+
 .hero {
   background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent),
     url('../images/hero-image.png');
@@ -149,6 +168,7 @@ blockquote span::before {
 
 .section-content {
   margin-top: 10.25rem;
+  position: relative;
 }
 
 .section-content:first-of-type {
@@ -177,7 +197,8 @@ blockquote span::before {
 
 .section-content h3 {
   counter-increment: titleList;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
+  position: relative;
 }
 
 .section-content h3::before {
@@ -186,8 +207,11 @@ blockquote span::before {
 
 .section-content h3::after {
   content: '';
-  width: 192px;
+  width: 80px;
   height: 4px;
   background-color: var(--gray30);
   display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
