@@ -48,10 +48,10 @@ body {
 }
 
 
-
 .wrapper {
   /*delimitar fronteras y centrar*/
-  width: 902px;
+  max-inline-size: 902px;
+  /* block-size: 100px; */
   margin: auto;
 }
 
@@ -129,7 +129,7 @@ h3 {
 
 pre {
   background-color: #FEC62E;
-  padding: 40px;
+  padding: 20px;
   line-height: 24px;
 }
 
@@ -141,6 +141,7 @@ blockquote {
   font-size: 1.5rem;
   border-radius: 8px;
   background-color: var(--gray10);
+  
 }
 
 .main hr {
