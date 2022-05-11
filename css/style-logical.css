@@ -48,6 +48,7 @@ body {
 }
 
 
+
 .wrapper {
   /*delimitar fronteras y centrar*/
   max-inline-size: 902px;
@@ -66,28 +67,11 @@ a {
   text-decoration: none;
 }
 
-p { color:  #A5A3A5;
+p {
+  color: #A5A3A5;
 }
 
-header {
-  font-size: 0.875rem;
-  width: 188px;
-  color: #fff;
-  position: absolute;
-  top: 64px;
-  left: -232px;
-  z-index: -1;
-}
 
-header a:hover {
-  color: #eee;
-  background-color: #fff;
-  padding: .5rem;
-}
-
-header li {
-  margin-bottom: 24px
-}
 
 nav details summary {
   font-weight: bold;
@@ -141,12 +125,13 @@ blockquote {
   font-size: 1.5rem;
   border-radius: 8px;
   background-color: var(--gray10);
-  
+
 }
 
 .main hr {
   display: none;
 }
+
 blockquote span {
   color: var(--gray20);
 }
@@ -171,8 +156,8 @@ blockquote span::before {
 }
 
 .section-content {
-  margin-block-start:5rem;
-  margin-block-end:3.75rem;
+  margin-block-start: 5rem;
+  margin-block-end: 3.75rem;
   position: relative;
 }
 
@@ -220,4 +205,83 @@ blockquote span::before {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+
+.slider-container {
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+
+iframe {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.form input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  background: transparent;
+  border-radius: 8px;
+  padding-inline: 12px;
+  padding-block: 12px;
+  color: #eee;
+  font-size: 1rem;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+  background-color: #157efb;
+  color: #eee;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+
+}
+
+.form input::placeholder{
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (min-width: 1366px) {
+  header {
+    font-size: 0.875rem;
+    width: 188px;
+    color: #fff;
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    z-index: -1;
+  }
+  header a:hover {
+    color: #eee;
+    background-color: #fff;
+    padding: .5rem;
+  }
+  header li {
+    margin-bottom: 24px
+  }
 }
